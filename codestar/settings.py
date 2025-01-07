@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'b%@dzq%dd344r^)24vkc7#n(dew*6r(wcwg^8p1+yz%6ckp)q)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.herokuapp.com', '8000-tommckechnie-djangoblog-qnj3ipy2cyl.ws.codeinstitute-ide.net']
 
@@ -110,9 +110,10 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+
 CSRF_TRUSTED_ORGINS = [
     "https://*.codeinstitute-ide.net/",
-    "https://*..herokuapp.com",
+    "https://*.herokuapp.com",
 ]
 
 
