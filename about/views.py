@@ -7,7 +7,18 @@ from .forms import CollaborateForm
 # Create your views here.
 
 def about_me(request):
-
+    """
+    Rendera the most recent information on the website author 
+    and allows user collaboration requests
+    Displays an individual instance of :model:`about.About`.
+    **Context**
+    ``about``
+        The most recent instance of :model: `about.About`.
+    ``collaborate_form``
+        An instance of :form: `about.CollaborateForm`.
+        **Template**
+        :template:`about/about.html`
+    """
     if request.method == "POST":
         collaborate_form = CollaborateForm(data=request.POST)
         if collaborate_form.is_valid():
